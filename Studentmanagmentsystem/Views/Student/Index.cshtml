@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Studentmanagmentsystem.Models.StudentTB>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="display-4 text-center mt-3 mb-5">Student Details</h2>
+<a class="btn btn-success " href="/Student/Homepage" style="margin-bottom:10px" title="Back to Home"><i class="fas fa-home"></i></a>
+
+<table class="table mt-4" id="studentTable">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.sid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fullname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.grade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.subject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.parentname)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.sid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fullname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.grade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.parentname)
+            </td>
+            <td>
+                <div class="btn-group">
+                    @Html.ActionLink("|", "Edit", new { id = item.sid }, new { @class = "btn btn-primary far fa-edit" })
+                    @Html.ActionLink("|", "Details", new { id = item.sid }, new { @class = "btn btn-secondary far fa-file-alt" })
+                    @Html.ActionLink("|", "Delete", new { id = item.sid }, new { @class = "btn btn-danger fas fa-trash-alt" })
+                </div>
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+

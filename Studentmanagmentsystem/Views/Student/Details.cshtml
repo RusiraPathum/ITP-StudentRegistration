@@ -1,0 +1,130 @@
+﻿@model Studentmanagmentsystem.Models.StudentTB
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="display-4 text-center mt-4">Details View</h2>
+
+<div>
+    
+    <hr class="mb-3" />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fullname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fullname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.school)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.school)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.grade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.grade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tpnum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tpnum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.parentname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.parentname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.parenttpnum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.parenttpnum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imagepath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imagepath)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.sid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
