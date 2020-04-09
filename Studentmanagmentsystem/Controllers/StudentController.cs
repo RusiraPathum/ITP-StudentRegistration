@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.Reporting.WebForms;
 using Studentmanagmentsystem.Models;
 
 namespace Studentmanagmentsystem.Controllers
@@ -23,6 +24,37 @@ namespace Studentmanagmentsystem.Controllers
             {
                 return View(dBModels.StudentTBs.ToList());
             }
+        }
+
+        public ActionResult Reports(string ReportType)
+        {
+            LocalReport localreport = new LocalReport();
+            DBModels dBModels = new DBModels();
+            localreport.ReportPath = Server.MapPath("~/Reports/StudentReport.rdlc");
+
+            ReportDataSource reportDataSource = new ReportDataSource();
+            reportDataSource.Name = "StudentDataSet1";
+            reportDataSource.Value = dBModels.StudentTBs.ToList();
+            localreport.DataSources.Add(reportDataSource);
+
+            String reportType = ReportType;
+            String mimeType;
+            string encoding;
+            String fileNameExtension;
+
+            if(reportType == "PDF")
+            {
+                fileNameExtension = "pdf";
+            }
+
+            string[] strems;
+            Warning[] warnings;
+            byte[] renderdByte;
+
+            renderdByte = localreport.Render(reportType, "", out mimeType, out encoding, out fileNameExtension, out strems, out warnings);
+            Response.AddHeader("content-dispostion", "attachment:filename = student_report." + fileNameExtension);
+            return File(renderdByte, fileNameExtension);
+
         }
 
         // GET: Student/Details/5

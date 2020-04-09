@@ -3,9 +3,11 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2 class="display-4 text-center mt-3 mb-5">Student Details</h2>
+<br />
+<br />
+<h2 class="display-4 text-center mt-3 mb-5"><b>Student Details</b></h2>
 <a class="btn btn-success " href="/Student/Homepage" style="margin-bottom:10px" title="Back to Home"><i class="fas fa-home"></i></a>
+
 
 <table class="table mt-4" id="studentTable">
     <tr>
@@ -22,7 +24,7 @@
             @Html.DisplayNameFor(model => model.email)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.password)
+            @Html.DisplayNameFor(model => model.address)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.grade)
@@ -55,7 +57,7 @@
                 @Html.DisplayFor(modelItem => item.email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.password)
+                @Html.DisplayFor(modelItem => item.address)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.grade)
@@ -82,6 +84,13 @@
 
 </table>
 
+@Html.ActionLink("Export To PDF", "Reports", new { ReportType = "PDF" }, new { @class = "btn btn-warning btn-sm" })
 
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
