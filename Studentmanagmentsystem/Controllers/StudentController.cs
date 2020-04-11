@@ -10,6 +10,38 @@ namespace Studentmanagmentsystem.Controllers
 {
     public class StudentController : Controller
     {
+        public ActionResult Loginpage()
+        {
+            return View();
+        }
+        
+        public ActionResult Autherize(Studentmanagmentsystem.Models.StudentTB studentTB)
+        {
+            using(DBModels dBModels = new DBModels())
+            {
+                string username = studentTB.username;
+                string password = studentTB.password;
+                var studentDetails = dBModels.StudentTBs.Where(x => x.username == studentTB.username && x.password == studentTB.password).FirstOrDefault();
+
+                if(username == "Admin" && password == "admin")
+                {
+                    return RedirectToAction("Homepage", "Student");
+                    
+                }
+                else if (studentDetails == null)
+                {
+                    studentTB.LoginErrorMessage = "Wrong username or password";
+                    return View("Loginpage", studentTB);
+                    
+                }
+                else
+                {
+                    Session["sid"] = studentDetails.sid;
+                    return RedirectToAction("Index", "Homepage");
+                }
+            }
+            
+        }
 
         // GET: Student/Home
         public ActionResult Homepage()
@@ -84,7 +116,7 @@ namespace Studentmanagmentsystem.Controllers
                     dBModels.SaveChanges();
                 }
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Homepage");
             }
             catch
             {

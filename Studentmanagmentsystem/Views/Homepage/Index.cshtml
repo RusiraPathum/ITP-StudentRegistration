@@ -1,15 +1,19 @@
-﻿<!DOCTYPE html>
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Tution Managemnt System</title>
-    <script src="https://kit.fontawesome.com/deb92968ea.js" crossorigin="anonymous"></script>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta name="viewport" content="width=device-width" />
+    <title>SIPMINI | Homepage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed">
         <a class="navbar-brand" href="#">SIPMINI</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -20,10 +24,10 @@
                     <a class="nav-link" href="/Homepage/Index">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="/Student/Loginpage">Login</a>                 
+                    <a class="nav-link" href="/Student/Loginpage">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contacus">Contact US</a>
+                    <a class="nav-link" href="#">Contact US</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About Us</a>
@@ -32,16 +36,13 @@
         </div>
     </nav>
 
-   
-
-
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-        </footer>
+    <div>
+        <h1 class="display-1 text-center mt-5">
+            Home Page
+        </h1>
     </div>
-    <br /><br /><br />
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
     <!-- Footer -->
     <footer class="container-fluid page-footer font-small pt-4 bg-dark text-light">
@@ -66,7 +67,6 @@
                 <hr class="w-100 clearfix d-md-none">
 
                 <!-- Grid column -->
-                
                 <!-- Grid column -->
 
                 <hr class="w-100 clearfix d-md-none">
@@ -93,7 +93,7 @@
 
                 <!-- Grid column -->
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 id="contacus" class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
                     <p>
                         <i class="fas fa-home mr-3"></i> No :- 15/1, Awissawella
                     </p>
@@ -167,9 +167,5 @@
     </footer>
     <!-- Footer -->
 
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>
