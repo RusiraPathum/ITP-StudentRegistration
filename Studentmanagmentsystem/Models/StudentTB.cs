@@ -13,6 +13,7 @@ namespace Studentmanagmentsystem.Models
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
+    using System.Web;
 
     public partial class StudentTB
     {
@@ -68,7 +69,9 @@ namespace Studentmanagmentsystem.Models
         public string parenttpnum { get; set; }
 
         [DisplayName("Choice Youer Image")]
-        [Required(ErrorMessage = "Please uplod image")]
         public string imagepath { get; set; }
+
+        public string LoginErrorMessage { get; set; }
+
     }
 }

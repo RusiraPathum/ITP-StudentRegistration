@@ -79,7 +79,7 @@
             <div class="col-md-10">
                 @Html.DropDownList("Gender", new List<SelectListItem>
                     {
-                        new SelectListItem{ Text = "Male", Value ="male", Selected = true},
+                        new SelectListItem{ Text = "Male", Value ="male"},
                         new SelectListItem{ Text = "Female", Value ="female"}
                     }, "Select Gender", new { htmlAttributes = new { @class = "btn btn-secondary dropdown-toggle" } })
                 @Html.ValidationMessageFor(model => model.gender, "", new { @class = "text-danger" })
@@ -87,7 +87,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.subject, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.subject,"Subject ( You can chose ONE subject )", htmlAttributes: new { @class = "control-label col-md-4" })
             <div class="col-md-10">
                 @Html.DropDownList("Subject", new List<SelectListItem>
                     {
@@ -123,13 +123,13 @@
             </div>
         </div>
 
-        <div class="form-group">
+        @*<div class="form-group">
             @Html.LabelFor(model => model.imagepath, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.imagepath, new { htmlAttributes = new { @class = "form-control col-md-10" } })
                 @Html.ValidationMessageFor(model => model.imagepath, "", new { @class = "text-danger" })
             </div>
-        </div>
+        </div>*@
 
         <div class="form-group" style="margin-left:670px">
             <div class="col-md-offset-2 col-md-10">
@@ -139,9 +139,6 @@
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
