@@ -113,10 +113,22 @@ namespace Studentmanagmentsystem.Controllers
                 using (DBModels dBModels = new DBModels())
                 {
                     dBModels.StudentTBs.Add(studentTB);
-                    dBModels.SaveChanges();
+                    
+
+                    if (ModelState.IsValid)
+                    {
+                        dBModels.SaveChanges();
+                        return RedirectToAction("Loginpage", "Student");
+                    }
+                    else
+                    {
+                        return View("Create");
+                    }
+
+
                 }
 
-                return RedirectToAction("Index", "Homepage");
+                //return RedirectToAction("Loginpage", "Student");
             }
             catch
             {

@@ -32,10 +32,11 @@ namespace Studentmanagmentsystem.Models
         public string username { get; set; }
 
         [DisplayName("Email")]
+        [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "E-mail is not valid")]
         [Required(ErrorMessage = "Please enter email")]
         public string email { get; set; }
 
-        [DataType(DataType.Password)]
+        [DataType(DataType.Password)]      
         [DisplayName("Password")]
         [Required(ErrorMessage = "Please enter password")]
         public string password { get; set; }
@@ -58,14 +59,16 @@ namespace Studentmanagmentsystem.Models
 
         [DisplayName("Telephone Number")]
         [Required(ErrorMessage = "Please enter telephone number")]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid Phone number")]
         public string tpnum { get; set; }
 
-        [DisplayName("ParentName")]
+        [DisplayName("ParentName")]        
         [Required(ErrorMessage = "Please enter parent name")]
         public string parentname { get; set; }
 
         [DisplayName("Parent Telephone Number")]
-        [Required(ErrorMessage = "Please enter parent telephone number")]
+        [Required(ErrorMessage = "Please enter Phone number")]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid Phone number")]
         public string parenttpnum { get; set; }
 
         [DisplayName("Choice Youer Image")]
