@@ -74,9 +74,13 @@ namespace Studentmanagmentsystem.Controllers
             string encoding;
             String fileNameExtension;
 
-            if(reportType == "PDF")
+            if (reportType == "PDF")
             {
                 fileNameExtension = "pdf";
+            } 
+            else if (reportType == "Word") 
+            {
+                fileNameExtension = "docx";
             }
 
             string[] strems;
@@ -119,13 +123,14 @@ namespace Studentmanagmentsystem.Controllers
                     {
                         dBModels.SaveChanges();
                         return RedirectToAction("Loginpage", "Student");
+
                     }
                     else
                     {
-                        return View("Create");
+                        return new JsonResult { Data = "Student not Registered"};
                     }
 
-
+                    
                 }
 
                 //return RedirectToAction("Loginpage", "Student");
@@ -134,6 +139,7 @@ namespace Studentmanagmentsystem.Controllers
             {
                 return View();
             }
+
         }
 
         // GET: Student/Edit/5

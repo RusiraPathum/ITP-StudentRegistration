@@ -3,94 +3,97 @@
 @{
     ViewBag.Title = "Index";
 }
-<br />
-<br />
-<h2 class="display-4 text-center mt-3 mb-5"><b>Student Details</b></h2>
-<a class="btn btn-success " href="/Student/Homepage" style="margin-bottom:10px" title="Back to Home"><i class="fas fa-home"></i></a>
+    <body class="container-fluid">
+        <br />
+        <br />
+        <h2 class="display-4 text-center mt-3 mb-5"><b>Student Details</b></h2>
+        <a class="btn btn-success " href="/Student/Homepage" style="margin-bottom:10px" title="Back to Home"><i class="fas fa-home"></i></a>
 
 
-<table class="table mt-4" id="studentTable">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.sid)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.fullname)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.username)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.address)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.grade)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.gender)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.subject)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.parentname)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.sid)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.fullname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.username)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.grade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.gender)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.subject)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.parentname)
-            </td>
-            <td>
-                <div class="btn-group">
-                    @Html.ActionLink("|", "Edit", new { id = item.sid }, new { @class = "btn btn-primary far fa-edit" })
-                    @Html.ActionLink("|", "Details", new { id = item.sid }, new { @class = "btn btn-secondary far fa-file-alt" })
-                    @Html.ActionLink("|", "Delete", new { id = item.sid }, new { @class = "btn btn-danger fas fa-trash-alt" })
-                </div>
-
-            </td>
-        </tr>
-    }
-
-</table>
-
-@Html.ActionLink("Export To PDF", "Reports", new { ReportType = "PDF" }, new { @class = "btn btn-warning btn-sm" })
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+        <table class="table  table-bordered table-hover table-responsive-xl mt-4" id="studentTable">
+            <thead class="thead-dark">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.sid)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.fullname)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.username)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.address)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.grade)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.gender)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.subject)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.parentname)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
 
 
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.sid)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fullname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.username)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.grade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.gender)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.subject)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.parentname)
+                    </td>
+                    <td>
+                        <div class="btn-group">
+                            @Html.ActionLink("|", "Edit", new { id = item.sid }, new { @class = "btn btn-primary far fa-edit" })
+                            @Html.ActionLink("|", "Details", new { id = item.sid }, new { @class = "btn btn-secondary far fa-file-alt" })
+                            @Html.ActionLink("|", "Delete", new { id = item.sid }, new { @class = "btn btn-danger fas fa-trash-alt" })
+                        </div>
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+        <br />
+
+
+        @Html.ActionLink("Export To PDF", "Reports", new { ReportType = "PDF" }, new { @class = "btn btn-warning btn-sm" })
+        @Html.ActionLink("Export To Word", "Reports", new { ReportType = "Word" }, new { @class = "btn btn-warning btn-sm" })
+
+        <br />
+        <br />
+
+    </body>

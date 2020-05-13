@@ -5,134 +5,265 @@
 }
 <br />
 <br />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <h2 class="display-4 text-center mt-4"><b>Delete View</b></h2>
 
-<h3 class="text-danger mt-3 mb-3">Are you sure you want to delete this?</h3>
+<h3 class="text-danger mt-3 mb-4">Are you sure you want to delete this?</h3>
 <div>
 
-    <hr class="mb-3" />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.sid)
-        </dt>
+    <hr class="mb-5" style="height:3px;border-width:0;color:gray;background-color:gray" />
 
-        <dd>
-            @Html.DisplayFor(model => model.sid)
-        </dd>
+    <div>
+        <div class="row mb-4">
+            <div class="col-3 text-primary font-weight-bold">
+                @Html.DisplayNameFor(model => model.sid)
+            </div>
+            <div class="col-9">
+                :- @Html.DisplayFor(model => model.sid)
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.fullname)
-        </dt>
+        <div class="row mb-4">
+            <div class="col-3 text-primary font-weight-bold">
+                @Html.DisplayNameFor(model => model.fullname)
+            </div>
+            <div class="col-9">
+                :- @Html.DisplayFor(model => model.fullname)
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.fullname)
-        </dd>
+        <div class="row mb-4">
+            <div class="col-3 text-primary font-weight-bold">
+                @Html.DisplayNameFor(model => model.school)
+            </div>
+            <div class="col-9">
+                :- @Html.DisplayFor(model => model.school)
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.school)
-        </dt>
+        <div class="row mb-4">
+            <div class="col-3 text-primary font-weight-bold">
+                @Html.DisplayNameFor(model => model.username)
+            </div>
+            <div class="col-9">
+                :- @Html.DisplayFor(model => model.username)
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.school)
-        </dd>
+        <div class="row mb-4">
+            <div class="col-3 text-primary font-weight-bold">
+                @Html.DisplayNameFor(model => model.email)
+            </div>
+            <div class="col-9">
+                :- @Html.DisplayFor(model => model.email)
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.username)
-        </dt>
+        <div class="row mb-4">
+            <div class="col-3 text-primary font-weight-bold">
+                @Html.DisplayNameFor(model => model.password)
+            </div>
+            <div class="col-9">
+                :- @Html.DisplayFor(model => model.password)
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.username)
-        </dd>
+        <div class="row mb-4">
+            <div class="col-3 text-primary font-weight-bold">
+                @Html.DisplayNameFor(model => model.address)
+            </div>
+            <div class="col-9">
+                :- @Html.DisplayFor(model => model.address)
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.email)
-        </dt>
+        <div class="row mb-4">
+            <div class="col-3 text-primary font-weight-bold">
+                @Html.DisplayNameFor(model => model.grade)
+            </div>
+            <div class="col-9">
+                :- @Html.DisplayFor(model => model.grade)
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.email)
-        </dd>
+        <div class="row mb-4">
+            <div class="col-3 text-primary font-weight-bold">
+                @Html.DisplayNameFor(model => model.gender)
+            </div>
+            <div class="col-9">
+                :- @Html.DisplayFor(model => model.gender)
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.password)
-        </dt>
+        <div class="row mb-4">
+            <div class="col-3 text-primary font-weight-bold">
+                @Html.DisplayNameFor(model => model.subject)
+            </div>
+            <div class="col-9">
+                :- @Html.DisplayFor(model => model.subject)
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.password)
-        </dd>
+        <div class="row mb-4">
+            <div class="col-3 text-primary font-weight-bold">
+                @Html.DisplayNameFor(model => model.tpnum)
+            </div>
+            <div class="col-9">
+                :- @Html.DisplayFor(model => model.tpnum)
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.address)
-        </dt>
+        <div class="row mb-4">
+            <div class="col-3 text-primary font-weight-bold">
+                @Html.DisplayNameFor(model => model.parentname)
+            </div>
+            <div class="col-9">
+                :- @Html.DisplayFor(model => model.parentname)
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.address)
-        </dd>
+        <div class="row mb-5">
+            <div class="col-3 text-primary font-weight-bold">
+                @Html.DisplayNameFor(model => model.parenttpnum)
+            </div>
+            <div class="col-9">
+                :- @Html.DisplayFor(model => model.parenttpnum)
+            </div>
+        </div>
+    </div>
+    
 
-        <dt>
-            @Html.DisplayNameFor(model => model.grade)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.grade)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.gender)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.gender)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.subject)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.subject)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.tpnum)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.tpnum)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.parentname)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.parentname)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.parenttpnum)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.parenttpnum)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.imagepath)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.imagepath)
-        </dd>
-
-    </dl>
 
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-danger mb-3" /> <br />
+            <input type="submit" value="Delete" class="btn btn-danger mb-3" title="Delete" style="margin-left:400px"
+                   onclick="return confirm('Are you sure you want to delete student : @Model.fullname')" /> <br />
             @Html.ActionLink("Back to List", "Index", new { @class = "btn" })
         </div>
     }
+
+    @*<dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.sid)
+            </dt>
+
+            <dd class="ml-5">
+                @Html.DisplayFor(model => model.sid)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.fullname)
+            </dt>
+
+            <dd class="ml-5">
+                @Html.DisplayFor(model => model.fullname)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.school)
+            </dt>
+
+            <dd class="ml-5">
+                @Html.DisplayFor(model => model.school)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.username)
+            </dt>
+
+            <dd class="ml-5">
+                @Html.DisplayFor(model => model.username)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.email)
+            </dt>
+
+            <dd class="ml-5">
+                @Html.DisplayFor(model => model.email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.password)
+            </dt>
+
+            <dd class="ml-5">
+                @Html.DisplayFor(model => model.password)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.address)
+            </dt>
+
+            <dd class="ml-5">
+                @Html.DisplayFor(model => model.address)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.grade)
+            </dt>
+
+            <dd class="ml-5">
+                @Html.DisplayFor(model => model.grade)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.gender)
+            </dt>
+
+            <dd class="ml-5">
+                @Html.DisplayFor(model => model.gender)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.subject)
+            </dt>
+
+            <dd class="ml-5">
+                @Html.DisplayFor(model => model.subject)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.tpnum)
+            </dt>
+
+            <dd class="ml-5">
+                @Html.DisplayFor(model => model.tpnum)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.parentname)
+            </dt>
+
+            <dd class="ml-5">
+                @Html.DisplayFor(model => model.parentname)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.parenttpnum)
+            </dt>
+
+            <dd class="ml-5">
+                @Html.DisplayFor(model => model.parenttpnum)
+            </dd>
+
+            @*<dt>
+                    @Html.DisplayNameFor(model => model.imagepath)
+                </dt>
+
+                <dd class="ml-5">
+                    @Html.DisplayFor(model => model.imagepath)
+                </dd>
+
+        </dl>*@
+
+
 </div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

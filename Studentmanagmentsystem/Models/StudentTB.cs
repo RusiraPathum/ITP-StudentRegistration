@@ -17,6 +17,7 @@ namespace Studentmanagmentsystem.Models
 
     public partial class StudentTB
     {
+        [DisplayName("Student ID")]
         public int sid { get; set; }
 
         [DisplayName("Full Name")]
@@ -57,7 +58,7 @@ namespace Studentmanagmentsystem.Models
         [Required(ErrorMessage = "Please enter subject")]
         public string subject { get; set; }
 
-        [DisplayName("Telephone Number")]
+        [DisplayName("Mobile Number")]
         [Required(ErrorMessage = "Please enter telephone number")]
         [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid Phone number")]
         public string tpnum { get; set; }
@@ -66,7 +67,7 @@ namespace Studentmanagmentsystem.Models
         [Required(ErrorMessage = "Please enter parent name")]
         public string parentname { get; set; }
 
-        [DisplayName("Parent Telephone Number")]
+        [DisplayName("Parent Mobile Number")]
         [Required(ErrorMessage = "Please enter Phone number")]
         [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid Phone number")]
         public string parenttpnum { get; set; }

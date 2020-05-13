@@ -11,16 +11,16 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
 
-        <hr />
+        <hr class="mb-3" style="height:3px;border-width:0;color:gray;background-color:gray"/>
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
 
         <div class="form-group">
             @Html.LabelFor(model => model.fullname, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 form">
                 @Html.EditorFor(model => model.fullname, new { htmlAttributes = new { @class = "form-control col-md-10" } })
                 @Html.ValidationMessageFor(model => model.fullname, "", new { @class = "text-danger" })
             </div>
@@ -82,13 +82,13 @@
                     {
                         new SelectListItem{ Text = "Male", Value ="male"},
                         new SelectListItem{ Text = "Female", Value ="female"}
-                    }, "Select Gender", new { htmlAttributes = new { @class = "btn btn-secondary dropdown-toggle" } })
+                    }, "Select Gender", new { htmlAttributes = new { @class = "dropdown dropdown-menu" } })
                 @Html.ValidationMessageFor(model => model.gender, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.subject,"Subject ( You can chose ONE subject )", htmlAttributes: new { @class = "control-label col-md-4" })
+            @Html.LabelFor(model => model.subject, "Subject ( You can chose ONE subject )", htmlAttributes: new { @class = "control-label col-md-4" })
             <div class="col-md-10">
                 @Html.DropDownList("Subject", new List<SelectListItem>
                     {
@@ -125,16 +125,16 @@
         </div>
 
         @*<div class="form-group">
-            @Html.LabelFor(model => model.imagepath, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.imagepath, new { htmlAttributes = new { @class = "form-control col-md-10" } })
-                @Html.ValidationMessageFor(model => model.imagepath, "", new { @class = "text-danger" })
-            </div>
-        </div>*@
+                @Html.LabelFor(model => model.imagepath, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.imagepath, new { htmlAttributes = new { @class = "form-control col-md-10" } })
+                    @Html.ValidationMessageFor(model => model.imagepath, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
 
         <div class="form-group" style="margin-left:670px">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Submit" class="btn btn-primary" />
+                <input type="submit" value="Register" title="Register" class="btn btn-primary" />
             </div>
         </div>
     </div>
