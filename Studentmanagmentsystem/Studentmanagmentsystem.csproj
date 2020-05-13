@@ -178,6 +178,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NewstudentregistrationDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="NewstudentregistrationDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewstudentregistrationDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
   </ItemGroup>
@@ -286,6 +291,17 @@
     </None>
     <Content Include="NewstudentregistrationDataSet.xss">
       <DependentUpon>NewstudentregistrationDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="NewstudentregistrationDataSet1.xsc">
+      <DependentUpon>NewstudentregistrationDataSet1.xsd</DependentUpon>
+    </Content>
+    <None Include="NewstudentregistrationDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewstudentregistrationDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="NewstudentregistrationDataSet1.xss">
+      <DependentUpon>NewstudentregistrationDataSet1.xsd</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
